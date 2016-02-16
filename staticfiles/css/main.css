@@ -1,56 +1,218 @@
 /* ==========================================================================
-   Author's custom styles
+   WWN custom styles
    ========================================================================== */
 
-.jumbotron h1 {
-    color: rgba(200, 50, 255, 1);
+/* Vertical align css */
+.vct {
+    display: table;
+    height: 100%;
+    width: 100%;}
+.vctr {
+    display: table-row;
+    height: 100%;
+    width: 100%;}
+.vctd {
+    display: table-cell;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;}
+
+.header-row {
+    margin-top: 10px;
+    margin-left: 45px;
+    margin-right: 45px;
 }
 
-.post-text {
-	font-family: 'Titillium Web', sans-serif;
-	font-size: 16px;
+.header-mid {
+    padding-top: 15px;
+    background-color: #6D6E71;
+    text-align: center;
+    color: white;
 }
 
-.post-text > a {
-	font-weight: 600;
+.header-mid-content {
+    padding-top: 15px;
+    background-color: #6D6E71;
+    text-align: left;
+    color: white;
 }
 
-.post-title {
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 36px;
-	color: #505050;
+.header-mid-content > .col-md-8 {
+    padding-left: 55px;
 }
 
-.subtitle {
-	color: #757575;
+.header-sub {
+    padding-bottom: 45px;
+    background-color: #6D6E71;
+    text-align: center;
+    color: white;
 }
 
-.code {
-	font-family: 'Anonymous Pro', ;
-	color: #ff8f00;
+.header-sub > .col-md-8 {
+    padding-left: 55px;
 }
 
-.post-body {
-	border-left: 1px solid;
-	border-color: #dfdfdf;
+.header-breadcrumb {
+    padding-left: 55px;
+    background-color: whitesmoke;
+    color: darkgrey;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
-.post-date {
-	background-color: #002a41;
-	color: #ffffff;
-	padding-left: 0.8em;
-	padding-right: 0.8em;
-	font-family: 'Anonymous Pro', sans-serif;
+.header-link {
+    float:right;
+    padding-left: 22px;
+    margin-top: 26px;
 }
 
-a:hover {
-	color: #002a41;
-	text-decoration: none;
+.panel-search {
+    background-color: white;
+    border-radius: 5px;
+    padding: 2px 2px 2px 2px;
 }
 
-.imgcontainer {
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	height: 100%;
+.panel-search > input {
+    width: 80%;
+    height: 45px;
+    color: #626469;
+    padding-left: 10px;
+    border-style: none;
+}
+
+.panel-search > button {
+    height: 40px;
+    width: 18%;
+    background-color: #009530;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.topic-row {
+    background-color: whitesmoke;
+}
+
+.topic-cell {
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 6%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.topic > .glyphicon {
+    padding-right: 10px;
+    color: #009530;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.topic-info > p {
+    color: darkgray;
+    font-size: 13px;
+}
+
+.topic-title {
+    font-size: 18px;
+}
+
+.article {
+    margin-left: 5px;
+}
+
+.content {
+    padding-top:15px;
+    padding-left:55px;
+    margin-bottom: 15px;
+}
+
+.related-articles {
+    background-color: whitesmoke;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+}
+
+.related-content {
+    padding-left: 30px;
+}
+
+.related-articles > h4 {
+    padding-bottom: 10px;
+}
+
+.comments {
+    color: darkgray;
+    font-size: 13px;
+}
+
+.link {
+    color: #32a3cb;
+}
+
+.accent {
+    font-size: 18px;
+    border-style: none none none solid;
+    border-color: #009530;
+    padding-left: 15px;
+    font-style: italic;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.published-content {
+    text-align: right;
+    padding-right: 30px;
+}
+
+.content > .thumbs-up {
+    height: 40px;
+    width: 100px;
+    background-color: #9cc051;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    margin-right: 5px;
+}
+
+.content > .thumbs-down {
+    height: 40px;
+    width: 100px;
+    background-color: #d26a40;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    margin-right: 5px;
+}
+
+.content > .submit {
+    height: 40px;
+    width: 100px;
+    background-color: #6D6E71;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    margin-right: 5px;
+    float: right;
+    margin-right: 20%;
+}
+
+.feedback {
+    margin-top:10px;
+    width: 80%;
+    height: 100px;
+}
+
+.footer {
+    background-color: whitesmoke;
+}
+
+.warning {
+    background-color: #ffd633;
+    color: white;
+    padding-left: 15px;
+    height: 35px;
+    padding-top: 7px;
 }

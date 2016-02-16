@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+<!-- HEADER WITH SEARCH GOES HERE -->
+{% block header-title %}
+Knowledge Base - Articles
+{% endblock %}
+
+{% block header-text %}
+Tips and insights to get more out of your Wonderware software.
+{% endblock%}
+
+{% block sub-header %}
+<div class="row header-breadcrumb">
+    <div class="col-md-8 col-md-offset-2">
+        <span class="custom-breadcrumb">Home / Knowledge Base / {{ article.category }} / {{ article.title }}</span>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-5 col-md-offset-2 content">
+        <h2>{{ article.title }}</h2>
+        <span>Published: </span>
+        <span class="link"> {{ article.published_date }}</span>
+        <span> | </span>
+        <span>Author: </span>
+        <span class="link">{{ article.author }}</span>
+        <span> | </span>
+        <span>Category: </span>
+        <span class="link">{{ article.category }}</span>
+        <span> | </span>
+        <span>Comments: </span>
+        <span class="link">3</span>
+        <hr>
+        {{ article.text|safe }}
+    </div>
+</div>
+{% endblock %}

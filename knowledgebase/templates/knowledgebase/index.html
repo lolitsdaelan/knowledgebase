@@ -1,7 +1,154 @@
 {% extends "base.html" %}
 
-{% block head_title %}WWN Dev Blog{% endblock %}
+<!-- HEADER WITH SEARCH GOES HERE -->
+{% block header-title %}
+Wonderware North Developer Blog
+{% endblock %}
 
+{% block header-text %}
+A collection of articles and training material provided by the engineers at Wonderware North.
+{% endblock%}
+
+<!-- THIS IS THE 'SECONDARY' HEADER W CATEGORIES OR BREADCRUMBS -->
+{% block sub-header %}
+<div class="row topic-row">
+    <div class="col-md-8 col-lg-offset-2">
+        <div class="col-md-3 topic-cell">
+            <div class="col-md-3 topic">
+                <span class="glyphicon glyphicon-folder-open"></span>
+            </div>
+            <div class="col-md-9 topic-info">
+                <span class="topic-title">Knowledge Base</span>
+                <p>{{ articles.count }} articles / {{ category_count.count }} categories</p>
+            </div>  
+        </div>
+        <div class="col-md-3 topic-cell">
+            <div class="col-md-3 topic">
+                <span class="glyphicon glyphicon-facetime-video"></span>
+            </div>
+            <div class="col-md-9 topic-info">
+                <span class="topic-title">Online Training</span>
+                <p>26 videos </p>
+            </div>  
+        </div>
+        <div class="col-md-3 topic-cell">
+            <div class="col-md-3 topic">
+                <span class="glyphicon glyphicon-bullhorn"></span>
+            </div>
+            <div class="col-md-9 topic-info">
+                <span class="topic-title">Forum</span>
+                <p>89 discussions </p>
+            </div>  
+        </div>
+    </div> 
+</div>
+{% endblock %}
+<!-- MAIN BODY CONTENT -->
 {% block content %}
-	<h1>OH YEAH</h1>
+<div class="row">
+    <div class="col-md-8 col-lg-offset-2">
+        <div class="col-md-4 content-cell">
+            <h4>Popular Articles</h4>
+            {% for article in articles %}
+            <div class="row article">
+                <div class="col-md-1">
+                    <span class="glyphicon glyphicon-file"></span>
+                </div>
+                <div class="col-md-10">
+                    <span>
+                    	<a href="{% url 'article' pk=article.pk slug=article.slug %}">{{ article.title }}</a>
+                    </span>
+                </div>
+            </div>
+            <hr>
+            {% endfor %}
+        </div>
+        <div class="col-md-4 content-cell">
+            <h4>Recent Videos</h4>
+            <div class="row article">
+                <div class="col-md-1">
+                    <span class="glyphicon glyphicon-play"></span>
+                </div>
+                <div class="col-md-10">
+                    <span>System Platform: Object Attributes</span>
+                </div>
+            </div>
+            <hr>
+            <div class="row article">
+                <div class="col-md-1">
+                    <span class="glyphicon glyphicon-play"></span>
+                </div>
+                <div class="col-md-10">
+                    <span>Configuring DAServers</span>
+                </div>
+               
+            </div>
+            <hr>
+            <div class="row article">
+                <div class="col-md-1">
+                    <span class="glyphicon glyphicon-play"></span>
+                </div>
+                <div class="col-md-10">
+                    <span>Archestra Graphics Primer</span>
+                </div>
+            </div>
+            <hr>
+            <div class="row article">
+                <div class="col-md-1">
+                    <span class="glyphicon glyphicon-play"></span>
+                </div>
+                <div class="col-md-10">
+                    <span>Creating InTouch Tags</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 content-cell">
+            <h4>Active Discussions</h4>
+            <div class="row article">
+                <div class="col-md-1">
+                    <span class="glyphicon glyphicon-comment"></span>
+                </div>
+                <div class="col-md-10">
+                    <span>System Platform: Object Attributes</span>
+                    <br>
+                    <span class="comments">45 comments</span>
+                </div>
+            </div>
+            <hr>
+            <div class="row article">
+                <div class="col-md-1">
+                    <span class="glyphicon glyphicon-comment"></span>
+                </div>
+                <div class="col-md-10">
+                    <span>Configuring DAServers</span>
+                    <br>
+                    <span class="comments">41 comments</span>
+                </div>
+               
+            </div>
+            <hr>
+            <div class="row article">
+                <div class="col-md-1">
+                    <span class="glyphicon glyphicon-comment"></span>
+                </div>
+                <div class="col-md-10">
+                    <span>Archestra Graphics Primer</span>
+                    <br>
+                    <span class="comments">28 comments</span>
+                </div>
+            </div>
+            <hr>
+            <div class="row article">
+                <div class="col-md-1">
+                    <span class="glyphicon glyphicon-comment"></span>
+                </div>
+                <div class="col-md-10">
+                    <span>Creating InTouch Tags</span>
+                    <br>
+                    <span class="comments">27 comments</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
