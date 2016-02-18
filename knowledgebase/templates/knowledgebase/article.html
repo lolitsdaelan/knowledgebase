@@ -22,7 +22,7 @@ Tips and insights to get more out of your Wonderware software.
     <div class="col-md-5 col-md-offset-2 content">
         <h2>{{ article.title }}</h2>
         <span>Published: </span>
-        <span class="link"> {{ article.published_date }}</span>
+        <span> {{ article.published_date|date:'M d, Y' }}</span>
         <span> | </span>
         <span>Author: </span>
         <span class="link">{{ article.author }}</span>
@@ -34,6 +34,166 @@ Tips and insights to get more out of your Wonderware software.
         <span class="link">3</span>
         <hr>
         {{ article.text|safe }}
+        <hr>
+
+   <!-- FEEDBACK SECTION -->
+
+	<div class="row">
+	    <div class="col-md-12">
+	        <h3>Was this article helpful?</h3>
+	        <button class="thumbs-up">
+	            <span class="glyphicon glyphicon-thumbs-up"></span>
+	            Yes
+	        </button>
+	        <button class="thumbs-down">
+	            <span class="glyphicon glyphicon-thumbs-down"></span>
+	            No
+	        </button>
+	        <br>
+	        <textarea class="feedback" placeholder="We appreciate your feedback. Leave a comment to help us further improve this article."></textarea>
+	        <br>
+	        <button class="submit">
+	            Submit
+	        </button>
+	    </div>
+	</div>
+
+	<!-- COMMENTS SECTION -->
+
+	<div class="row">
+	    <div class="col-md-12">
+	        <h3>3 Comments</h3>
+	        <hr>
+	        <h4>Daelan Scroggins</h4>
+	        <span class="comments">4 days ago</span>
+	        <br>
+	        <br>
+	        <span>Vivamus id nisl augue. Mauris orci odio, cursus nec ultrices eu, tempor in magna. Duis nec eros in nisi faucibus consectetur. Ut tincidunt augue odio, finibus iaculis nibh varius vitae. Nulla tellus est, venenatis sed dignissim nec, aliquet vehicula elit. Etiam bibendum rhoncus est a facilisis. Suspendisse potenti.</span>
+	        <hr>
+	        <h4>Tate Stuntz</h4>
+	        <span class="comments">7 days ago</span>
+	        <br>
+	        <br>
+	        <span>Nunc sem sem, bibendum eu placerat efficitur, finibus eget enim. Nullam eget mollis ligula. Nulla sit amet urna fringilla, lobortis tortor et, pharetra ante. Proin convallis felis urna, vitae ullamcorper lorem tempus nec. Donec id fermentum ex, in aliquet sem. Mauris aliquam gravida finibus. Aliquam nisi eros, dictum non dictum id, sollicitudin nec nisi. Vivamus fermentum scelerisque purus, nec cursus felis. Nam interdum justo vitae odio varius, fringilla lacinia felis scelerisque. Praesent quis ligula ac arcu finibus rutrum. Nunc lectus nunc, vulputate egestas est at, tincidunt maximus diam.</span>
+	        <hr>
+	        <h4>Brian Jones</h4>
+	        <span class="comments">8 days ago</span>
+	        <br>
+	        <br>
+	        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rhoncus neque eget lectus ornare, nec venenatis ex scelerisque. Duis id elit euismod, condimentum eros vel, aliquet augue. Etiam ac porta enim, mollis dictum augue. In congue rhoncus scelerisque. Curabitur fermentum nibh leo, ac porta augue varius vehicula. Nam placerat leo nec lacinia auctor. Phasellus eros ipsum, volutpat vel elit vitae, lacinia accumsan urna. Sed posuere nisi quis arcu bibendum, hendrerit aliquet justo ullamcorper. Etiam vulputate est at tellus semper tempor. Vivamus vehicula interdum eros, non commodo urna fringilla at. Pellentesque sagittis faucibus neque ut lobortis. Aenean ultricies porta enim non tempus..</span>
+	    </div>
+	</div>
+	<div class="row">
+	    <div class="col-md-12">
+	    <h3>Leave A Comment?</h3>
+	    <textarea class="feedback" placeholder="Enter your comment here."></textarea>
+	        <button class="submit">
+	            Submit
+	        </button>
+	    </div>
+	</div>
+
     </div>
+
+ 
+
+<!-- THIS IS THE RIGHT HAND SECTION. BE SURE TO REPLACE THIS AT SOME POINT -->
+	
+	<div class="col-md-3 related-content">
+	    <div class="row related-articles">
+	        <h4>Related Articles</h4>
+	        <div class="row article">
+	            <div class="col-md-1">
+	                <span class="glyphicon glyphicon-file"></span>
+	            </div>
+	            <div class="col-md-10">
+	                <span>Triggering Workflows From System Platform</span>
+	            </div>
+	        </div>
+	        <hr>
+	        <div class="row article">
+	            <div class="col-md-1">
+	                <span class="glyphicon glyphicon-file"></span>
+	            </div>
+	            <div class="col-md-10">
+	                <span>Interacting With SQL Server</span>
+	            </div>
+	        </div>
+	        <hr>
+	        <div class="row article">
+	            <div class="col-md-1">
+	                <span class="glyphicon glyphicon-file"></span>
+	            </div>
+	            <div class="col-md-10">
+	                <span>Forms and Dynamic Fields</span>
+	            </div>
+	        </div>
+	        <hr>
+	        <div class="row article">
+	            <div class="col-md-1">
+	                <span class="glyphicon glyphicon-file"></span>
+	            </div>
+	            <div class="col-md-10">
+	                <span>Designing Smarter Workflows</span>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="row related-articles">
+	        <h4>Knowledge Base Authors</h4>
+	        <div class="row">
+	            <div class="col-md-6">
+	                <span>Daelan Scroggins</span>
+	                <br>
+	                <span class="comments">5 yrs @ Wonderware North</span>
+	            </div>
+	            <div class="col-md-6">
+	                <span>9 articles</span>
+	                <br>
+	                <span>2 videos</span>
+	            </div>
+	        </div>
+	        <hr>
+	        <div class="row">
+	            <div class="col-md-6">
+	                <span>Mike Boyer</span>
+	                <br>
+	                <span class="comments">3 yrs @ Wonderware North</span>
+	            </div>
+	            <div class="col-md-6">
+	                <span>14 articles</span>
+	                <br>
+	                <span></span>
+	            </div>
+	        </div>
+	        <hr>
+	        <div class="row">
+	            <div class="col-md-6">
+	                <span>Mike Wagner</span>
+	                <br>
+	                <span class="comments">∞ yrs @ Wonderware North</span>
+	            </div>
+	            <div class="col-md-6">
+	                <span>184 articles</span>
+	                <br>
+	                <span>200 videos</span>
+	            </div>
+	        </div>
+	        <hr>
+	        <div class="row">
+	            <div class="col-md-6">
+	                <span>Jeff Bayer</span>
+	                <br>
+	                <span class="comments">8 yrs @ Wonderware North</span>
+	            </div>
+	            <div class="col-md-6">
+	                <span>24 articles</span>
+	                <br>
+	                <span>1 video</span>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 </div>
+
+
 {% endblock %}
