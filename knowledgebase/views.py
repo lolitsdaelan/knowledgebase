@@ -11,5 +11,5 @@ def home(request):
 
 def article(request, pk, slug):
 	article = get_object_or_404(Article, pk=pk)
-	return render(request, 'knowledgebase/article.html'
+	return render(request, 'knowledgebase/article_detail.html'
 		, {'article':article})
