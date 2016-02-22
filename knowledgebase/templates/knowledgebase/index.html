@@ -11,40 +11,141 @@ A collection of articles and training material provided by the engineers at Wond
 
 <!-- THIS IS THE 'SECONDARY' HEADER W CATEGORIES OR BREADCRUMBS -->
 {% block sub-header %}
-<div class="row topic-row">
-    <div class="col-md-8 col-lg-offset-2">
-        <div class="col-md-3 topic-cell">
-            <div class="col-md-3 topic">
-                <span class="glyphicon glyphicon-folder-open"></span>
+<div class="header-sub-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="header-sub-section header-sub-section-left">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="glyphicon glyphicon-folder-open"></span>
+                        </div>
+                        <div class="col-sm-7">
+                            <span class="header-sub-section-title">Knowledge Base</span>
+                            <p class="header-sub-section-text">523 articles / 12 categories </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-9 topic-info">
-                <span class="topic-title">Knowledge Base</span>
-                <p>{{ articles.count }} articles / {{ category_count.count }} categories</p>
-            </div>  
-        </div>
-        <div class="col-md-3 topic-cell">
-            <div class="col-md-3 topic">
-                <span class="glyphicon glyphicon-facetime-video"></span>
+            <div class="col-md-4">
+                <div class="header-sub-section header-sub-section-center">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="glyphicon glyphicon-facetime-video"></span>
+                        </div>
+                        <div class="col-sm-7">
+                            <span class="header-sub-section-title">Online Training</span>
+                            <p class="header-sub-section-text">26 videos / 6 categories</p>
+                        </div>  
+                    </div>
+                </div>
             </div>
-            <div class="col-md-9 topic-info">
-                <span class="topic-title">Online Training</span>
-                <p>26 videos </p>
-            </div>  
-        </div>
-        <div class="col-md-3 topic-cell">
-            <div class="col-md-3 topic">
-                <span class="glyphicon glyphicon-bullhorn"></span>
+            <div class="col-md-4">
+                <div class="header-sub-section header-sub-section-right">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <span class="glyphicon glyphicon-bullhorn"></span>
+                        </div>
+                        <div class="col-sm-7">
+                            <span class="header-sub-section-title">Forum</span>
+                            <p class="header-sub-section-text">89 discussions / 58 users</p>
+                        </div>  
+                    </div>
+                </div>
             </div>
-            <div class="col-md-9 topic-info">
-                <span class="topic-title">Forum</span>
-                <p>89 discussions </p>
-            </div>  
         </div>
-    </div> 
+    </div>
 </div>
 {% endblock %}
 <!-- MAIN BODY CONTENT -->
 {% block content %}
+<div class="container content-body">
+    <div class="row">
+        <div class="col-md-4 content-section">
+            <h3>Recent Articles</h3>
+            {% for article in articles %}
+            <div class="row article">
+                <div class="col-sm-1">
+                    <span class="glyphicon glyphicon-file"></span>
+                </div>
+                <div class="col-sm-10">
+                    <span>{{ article.title }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-4 content-section">
+            <h3>Popular Videos</h3>
+            <div class="row article">
+                <div class="col-sm-1">
+                    <span class="glyphicon glyphicon-play"></span>
+                </div>
+                <div class="col-sm-10">
+                    <span>System Platform: Object Attributes Are Your Friend!</span>
+                </div>
+            </div>
+            <div class="row article">
+                <div class="col-sm-1">
+                    <span class="glyphicon glyphicon-play"></span>
+                </div>
+                <div class="col-sm-10">
+                    <span>Configuring DAServers</span>
+                </div>
+
+            </div>
+            <div class="row article">
+                <div class="col-sm-1">
+                    <span class="glyphicon glyphicon-play"></span>
+                </div>
+                <div class="col-sm-10">
+                    <span>Archestra Graphics Animation Links</span>
+                </div>
+            </div>
+            <div class="row article">
+                <div class="col-sm-1">
+                    <span class="glyphicon glyphicon-play"></span>
+                </div>
+                <div class="col-sm-10">
+                    <span>Creating InTouch Tags With Style and Ease</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 content-section">
+            <h3>Active Discussions</h3>
+            <div class="row article">
+                <div class="col-sm-1">
+                    <span class="glyphicon glyphicon-comment"></span>
+                </div>
+                <div class="col-sm-10">
+                    <span>System Platform: Object Attributes</span>
+                    <br>
+                    <span class="sub-text">45 comments</span>
+                </div>
+            </div>
+            <div class="row article">
+                <div class="col-sm-1">
+                    <span class="glyphicon glyphicon-comment"></span>
+                </div>
+                <div class="col-sm-10">
+                    <span>Configuring DAServers</span>
+                    <br>
+                    <span class="sub-text">41 comments</span>
+                </div>
+            </div>
+            <div class="row article">
+                <div class="col-sm-1">
+                    <span class="glyphicon glyphicon-comment"></span>
+                </div>
+                <div class="col-sm-10">
+                    <span>Archestra Graphics Primer</span>
+                    <br>
+                    <span class="sub-text">28 comments</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--
 <div class="row">
     <div class="col-md-8 col-lg-offset-2">
         <div class="col-md-4 content-cell">
@@ -151,4 +252,5 @@ A collection of articles and training material provided by the engineers at Wond
         </div>
     </div>
 </div>
+-->
 {% endblock %}
