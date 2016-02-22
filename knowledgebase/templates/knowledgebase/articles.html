@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+<!-- HEADER WITH SEARCH GOES HERE -->
+{% block header-title %}
+Knowledge Base - Articles
+{% endblock %}
+
+{% block header-text %}
+Tips and insights to get more out of your Wonderware software.
+{% endblock%}
+
+{% block sub-header %}
+<div class="header-sub-container">
+    <div class="container">
+        <div class="row header-sub-breadcrumb">
+            <div class="col-md-12">
+                <span>Home / Knowledge Base</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container content-body">
+    <div class="row">
+        <div class="col-md-9">
+        <h2 class="content-header">Categories</h2>
+        {% for category in categories %}
+        	<div class="col-md-4 content-section">
+                <h3>{{ category.category }}</h3>
+                <p class="sub-text">{{ category.category.count }} articles</p>
+                <hr>
+            </div>
+        {% endfor %}
+	        <!--
+	        <div class="row">
+	            <div class="col-md-4 content-section">
+	                <h3>InTouch</h3>
+	                <p class="sub-text">53 articles</p>
+	                <hr>
+	            </div>
+	            <div class="col-md-4 content-section">
+	                <h3>System Platform</h3>
+	                <p class="sub-text">81 articles</p>
+	                <hr>
+	            </div>
+	            <div class="col-md-4 content-section">
+	                <h3>MES</h3>
+	                <p class="sub-text">12 articles</p>
+	                <hr>
+	            </div>
+	        </div>
+	        <div class="row">
+	            <div class="col-md-4 content-section">
+	                <h3>Info Server</h3>
+	                <p class="sub-text">53 articles</p>
+	                <hr>
+	            </div>
+	            <div class="col-md-4 content-section">
+	                <h3>InBatch</h3>
+	                <p class="sub-text">81 articles</p>
+	                <hr>
+	            </div>
+	            <div class="col-md-4 content-section">
+	                <h3>Workflow</h3>
+	                <p class="sub-text">12 articles</p>
+	                <hr>
+	            </div>
+	        </div>
+	        <div class="row">
+	            <div class="col-md-4 content-section">
+	                <h3>Historian</h3>
+	                <p class="sub-text">53 articles</p>
+	                <hr>
+	            </div>
+	            <div class="col-md-4 content-section">
+	                <h3>Historian Client</h3>
+	                <p class="sub-text">81 articles</p>
+	                <hr>
+	            </div>
+	        </div>
+	        -->
+	    </div>
+	</div>
+</div>
+{% endblock %}

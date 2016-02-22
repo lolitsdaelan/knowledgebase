@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^$'
     	, views.home, name='home'),
     url(r'articles/(?P<pk>[0-9]+)/(?P<slug>[\w-]+)/'
-    #url(r'^article/(?P<pk>[0-9]+)/'
         , views.article, name='article'),
+    url(r'articles/'
+        , views.articles, name='articles'),
 ]
