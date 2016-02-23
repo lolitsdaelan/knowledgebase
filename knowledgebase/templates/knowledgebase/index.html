@@ -16,14 +16,14 @@ A collection of articles and training material provided by the engineers at Wond
         <div class="row">
             <div class="col-md-4">
                 <div class="header-sub-section header-sub-section-left">
-                    <a href="{% url 'articles' %}">
+                    <a href="{% url 'article_categories' %}">
                     <div class="row">
                         <div class="col-sm-3">
                             <span class="glyphicon glyphicon-folder-open"></span>
                         </div>
                         <div class="col-sm-7">
                             <span class="header-sub-section-title">Knowledge Base</span>
-                            <p class="header-sub-section-text">{{ articles.count }} articles / {{ categories.count }} categories </p>
+                            <p class="header-sub-section-text">{{ article_count }} articles / {{ category_count }} categories </p>
                         </div>
                     </div>
                     </a>
@@ -31,6 +31,7 @@ A collection of articles and training material provided by the engineers at Wond
             </div>
             <div class="col-md-4">
                 <div class="header-sub-section header-sub-section-center">
+                    <a href="#">
                     <div class="row">
                         <div class="col-sm-3">
                             <span class="glyphicon glyphicon-facetime-video"></span>
@@ -40,10 +41,12 @@ A collection of articles and training material provided by the engineers at Wond
                             <p class="header-sub-section-text">26 videos / 6 categories</p>
                         </div>  
                     </div>
+                    </a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="header-sub-section header-sub-section-right">
+                    <a href="#">
                     <div class="row">
                         <div class="col-sm-3">
                             <span class="glyphicon glyphicon-bullhorn"></span>
@@ -53,6 +56,7 @@ A collection of articles and training material provided by the engineers at Wond
                             <p class="header-sub-section-text">89 discussions / 58 users</p>
                         </div>  
                     </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -65,7 +69,7 @@ A collection of articles and training material provided by the engineers at Wond
     <div class="row">
         <div class="col-md-4 content-section">
             <h3>Recent Articles</h3>
-            {% for article in articles %}
+            {% for article in recent_articles %}
             <div class="row article">
                 <div class="col-sm-1">
                     <span class="glyphicon glyphicon-file"></span>

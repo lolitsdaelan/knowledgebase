@@ -141,7 +141,7 @@ nav ul li a:hover {
     margin-right: 30px;
 }
 */
-.header-sub-section > .row > .col-sm-3 > .glyphicon {
+.header-sub-section > a >.row > .col-sm-3 > .glyphicon {
     font-size: 25px;
     color: #009530;
     margin-left: 30px;

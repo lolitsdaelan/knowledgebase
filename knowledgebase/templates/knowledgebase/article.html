@@ -14,7 +14,7 @@ Tips and insights to get more out of your Wonderware software.
     <div class="container">
         <div class="row header-sub-breadcrumb">
             <div class="col-md-12">
-                <span>Home / Knowledge Base / {{ article.category }} / {{ article.title }}</span>
+                <span><a href="{% url 'home' %}">Home</a> / <a href="{% url 'article_categories' %}">Knowledge Base</a> / <a href="{% url 'article_category' slug=article.category.slug %}">{{ article.category }}</a> / {{ article.title }}</span>
             </div>
         </div>
     </div>

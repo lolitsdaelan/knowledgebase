@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+<!-- HEADER WITH SEARCH GOES HERE -->
+{% block header-title %}
+Knowledge Base - Articles
+{% endblock %}
+
+{% block header-text %}
+Tips and insights to get more out of your Wonderware software.
+{% endblock%}
+
+{% block sub-header %}
+<div class="header-sub-container">
+    <div class="container">
+        <div class="row header-sub-breadcrumb">
+            <div class="col-md-12">
+                <span><a href="{% url 'home' %}">Home</a> / <a href="{% url 'article_categories' %}">Knowledge Base</a> / {% with articles|first as article %}{{ article.category }}{% endwith %}</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container  content-body">
+    <div class="row">
+        <div class="col-md-9">
+            <h2 class="content-header">{% with articles|first as article %}{{ article.category }}{% endwith %}</h2>
+            {% for article in articles %}
+            <div class="row">
+                <div class="col-md-12 content-section">
+                    <h3><a href="{% url 'article' pk=article.pk slug=article.slug%}">{{ article.title }}</a></h3>
+                    <div class="sub-text">
+                        <span>Published: </span>
+			            <span>{{ article.published_date|date:'M d, Y' }}</span>
+			            <span> | </span>
+			            <span>Author: </span>
+			            <span class="link">{{ article.author }}</span>
+			            <span> | </span>
+			            <span>Category: </span>
+			            <span class="link">{{ article.category }}</span>
+			            <span> | </span>
+			            <span>Comments: </span>
+			            <span class="link">3</span>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

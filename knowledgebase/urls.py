@@ -24,6 +24,9 @@ urlpatterns = [
     	, views.home, name='home'),
     url(r'articles/(?P<pk>[0-9]+)/(?P<slug>[\w-]+)/'
         , views.article, name='article'),
+    url(r'articles/(?P<slug>[\w-]+)/'
+        , views.article_category, name='article_category'),
     url(r'articles/'
-        , views.articles, name='articles'),
+        , views.article_categories, name='article_categories'),
+    
 ]
