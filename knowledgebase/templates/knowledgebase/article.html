@@ -26,17 +26,16 @@ Tips and insights to get more out of your Wonderware software.
     <div class="row">
         <div class="col-md-9">
             <h2>{{ article.title }}</h2>
-            <span>Published: </span>
-            <span>{{ article.published_date|date:'M d, Y' }}</span>
-            <span> | </span>
-            <span>Author: </span>
-            <span class="link">{{ article.author }}</span>
-            <span> | </span>
-            <span>Category: </span>
-            <span class="link">{{ article.category }}</span>
-            <span> | </span>
-            <span>Comments: </span>
-            <span class="link">3</span>
+            <div class="sub-text">
+                <span>Published: </span>
+                <span>{{ article.published_date|date:'M d, Y' }}</span>
+                <span> | </span>
+                <span>Author: </span>
+                <span class="link">{{ article.author }}</span>
+                <span> | </span>
+                <span>Comments: </span>
+                <span class="link">3</span>
+            </div>
             <hr>
             {{ article.text|safe }}
             <hr>

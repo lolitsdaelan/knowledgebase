@@ -22,11 +22,10 @@ urlpatterns = [
     	, include(admin.site.urls)),
     url(r'^$'
     	, views.home, name='home'),
-    url(r'articles/(?P<pk>[0-9]+)/(?P<slug>[\w-]+)/'
-        , views.article, name='article'),
-    url(r'articles/(?P<slug>[\w-]+)/'
-        , views.article_category, name='article_category'),
-    url(r'articles/'
+    url(r'^articles/$'
         , views.article_categories, name='article_categories'),
-    
+    url(r'^articles/(?P<slug>[\w-]+)/$'
+        , views.article_category, name='article_category'),
+    url(r'^articles/(?P<category_slug>[\w-]+)/(?P<pk>[0-9]+)/(?P<article_slug>[\w-]+)/$'
+        , views.article, name='article'),
 ]

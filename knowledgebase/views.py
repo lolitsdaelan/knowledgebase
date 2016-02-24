@@ -12,7 +12,7 @@ def home(request):
 		, {'article_count':article_count,'category_count':category_count
 			, 'recent_articles':recent_articles})
 
-def article(request, pk, slug):
+def article(request, pk, article_slug, category_slug):
 	article = get_object_or_404(Article, pk=pk)
 	return render(request, 'knowledgebase/article.html'
 		, {'article':article})

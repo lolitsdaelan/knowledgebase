@@ -107,6 +107,10 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+button > a {
+    color:white;
+}
+
 /**************************** END: Header styles ****************************/
 
 

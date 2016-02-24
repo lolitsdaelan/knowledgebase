@@ -14,7 +14,7 @@ Tips and insights to get more out of your Wonderware software.
     <div class="container">
         <div class="row header-sub-breadcrumb">
             <div class="col-md-12">
-                <span><a href="{% url 'home' %}">Home</a> / <a href="{% url 'article_categories' %}">Knowledge Base</a> / {% with articles|first as article %}{{ article.category }}{% endwith %}</span>
+                <span><a href="{% url 'home' %}">Home</a> / Search</span>
             </div>
         </div>
     </div>
@@ -24,11 +24,10 @@ Tips and insights to get more out of your Wonderware software.
 <div class="container  content-body">
     <div class="row">
         <div class="col-md-9">
-            <h2 class="content-header">{% with articles|first as article %}{{ article.category }}{% endwith %}</h2>
-            {% for article in articles %}
+            <h2 class="content-header">SEARCH RESULTS
             <div class="row">
                 <div class="col-md-12 content-section">
-                    <h3><a href="{% url 'article' pk=article.pk article_slug=article.slug category_slug=article.category.slug %}">{{ article.title }}</a></h3>
+                    <h3><a href="{% url 'article' pk=article.pk article_slug=article.slug category_slug=article.category.slug %}">TITLE</a></h3>
                     <div class="sub-text">
                         <span>Published: </span>
 			            <span>{{ article.published_date|date:'M d, Y' }}</span>
