@@ -83,7 +83,17 @@
             </div>
             <div class="row">
                 <div class="col-md-8">
-                    <div class="search-bar">
+                    
+                    <form id="searchform" action="{% url 'search' %}" method="get" accept-charset="utf-8">
+                        <div class="search-bar">
+                            <input id="search-bar" type="text" placeholder="Search the Knowledge Base..." name=q>
+                            <button>
+                                <span class="glyphicon glyphicon-search"></span>
+                                Search
+                            </button>
+                        </div>
+                    </form>
+                    <!--
                         <input id="search-bar" type="text" placeholder="Search the Knowledge Base...">
                         <button>
                             <a href="#">
@@ -91,7 +101,16 @@
                                 Search
                             </a>
                         </button>
-                    </div>
+                        -->
+                        <!--
+                        <form id="searchform" action="{% url 'search' %}" method="get" accept-charset="utf-8">
+                            <button class="searchbutton" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            <input class="searchfield" id="searchbox" name="q" type="text" placeholder="Searc">
+                        </form>
+                        -->
+                    
                 </div>
             </div>
         </div>

@@ -24,16 +24,18 @@ Tips and insights to get more out of your Wonderware software.
 <div class="container  content-body">
     <div class="row">
         <div class="col-md-9">
-            <h2 class="content-header">SEARCH RESULTS
+            <h2 class="content-header">{{results_count}} results for "{{ query }}"
+            <hr>
+            {% for result in results %}
             <div class="row">
                 <div class="col-md-12 content-section">
-                    <h3><a href="{% url 'article' pk=article.pk article_slug=article.slug category_slug=article.category.slug %}">TITLE</a></h3>
+                    <h3><a href="{% url 'article' pk=result.pk article_slug=result.slug category_slug=result.category.slug %}">{{ result.title }}</a></h3>
                     <div class="sub-text">
                         <span>Published: </span>
-			            <span>{{ article.published_date|date:'M d, Y' }}</span>
+			            <span>{{ result.published_date|date:'M d, Y' }}</span>
 			            <span> | </span>
 			            <span>Author: </span>
-			            <span class="link">{{ article.author }}</span>
+			            <span class="link">{{ result.author }}</span>
 			            <span> | </span>
 			            <span>Comments: </span>
 			            <span class="link">3</span>

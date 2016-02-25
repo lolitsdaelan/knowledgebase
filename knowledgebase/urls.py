@@ -28,4 +28,6 @@ urlpatterns = [
         , views.article_category, name='article_category'),
     url(r'^articles/(?P<category_slug>[\w-]+)/(?P<pk>[0-9]+)/(?P<article_slug>[\w-]+)/$'
         , views.article, name='article'),
+    url(r'^search/$',
+        views.search, name='search'),
 ]
