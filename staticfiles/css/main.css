@@ -1,64 +1,63 @@
-/* ==========================================================================
-   WWN custom styles
-   ========================================================================== */
+/**************************** BEGIN: Generic styles ****************************/
 
-/* Vertical align css */
-.vct {
-    display: table;
-    height: 100%;
-    width: 100%;}
-.vctr {
-    display: table-row;
-    height: 100%;
-    width: 100%;}
-.vctd {
-    display: table-cell;
-    height: 100%;
-    width: 100%;
-    vertical-align: middle;}
-
-.header-row {
-    margin-top: 10px;
-    margin-left: 45px;
-    margin-right: 45px;
+h1, h2, h3, h4, h5, h6 { 
+    margin:0; padding: 0; 
 }
 
-.header-mid {
-    padding-top: 15px;
-    background-color: #6D6E71;
+/**************************** END: Generic styles ****************************/
+
+/**************************** BEGIN: Nav styles ****************************/
+
+nav.navbar-default {
+    background-color: white;
+    margin-bottom: 0px;
+    border-style: none;
+    margin-top: 5px;
+}
+
+.navbar-header > button {
+    margin-top: 20px;
+}
+
+#wwn-navbar ul li { 
+    margin-top: 17px; 
     text-align: center;
-    color: white;
 }
 
-.header-mid-content {
-    padding-top: 15px;
-    background-color: #6D6E71;
-    text-align: left;
-    color: white;
+/**************************** END: Nav styles ****************************/
+
+/**************************** BEGIN: Header styles ****************************/
+/* Nav stlyes from Ted */
+/*
+nav {
+  font-size: 0;
 }
 
-.header-mid-content > .col-md-8 {
-    padding-left: 55px;
+nav ul {
+  margin: 0;
+  padding: 0;
+  float: right;
 }
 
-.header-sub {
-    padding-bottom: 45px;
-    background-color: #6D6E71;
-    text-align: center;
-    color: white;
+nav ul li {
+  list-style: none;
+  display: inline-block;
 }
 
-.header-sub > .col-md-8 {
-    padding-left: 55px;
+nav ul li a {
+  font-size: 14px;
+  padding: 15px;
+  background-color: #f00;
+  color: #fff;
+  text-decoration: none;
+  line-height: 25px;
 }
 
-.header-breadcrumb {
-    padding-left: 55px;
-    background-color: whitesmoke;
-    color: darkgrey;
-    padding-bottom: 5px;
-    padding-top: 5px;
+nav ul li a:hover {
+  background-color: #0f0;
 }
+*/
+/* Nav stlyes from Ted */
 
 .header-link {
     float:right;
@@ -66,90 +65,151 @@
     margin-top: 26px;
 }
 
-.panel-search {
-    background-color: white;
-    border-radius: 5px;
-    padding: 2px 2px 2px 2px;
+.header-container {
+    background-color: #6D6E71;
+    padding-top: 46px;
+    padding-bottom: 50px;
 }
 
-.panel-search > input {
+.header-text > h1 {
+    color: white;
+}
+
+.header-text > p {
+    color: white;
+}
+
+.search-bar {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.search-bar > input {
     width: 80%;
     height: 45px;
-    color: #626469;
-    padding-left: 10px;
     border-style: none;
-}
-
-.panel-search > button {
-    height: 40px;
-    width: 18%;
-    background-color: #009530;
-    border-style: none;
-    border-radius: 5px;
-}
-
-.topic-row {
-    background-color: whitesmoke;
-}
-
-.topic-cell {
-    background-color: white;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-left: 6%;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.topic > .glyphicon {
-    padding-right: 10px;
-    color: #009530;
-    font-size: 25px;
-    margin-top: 10px;
-}
-
-.topic-info > p {
-    color: darkgray;
-    font-size: 13px;
-}
-
-.topic-title {
-    font-size: 18px;
-}
-
-.article {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 5px;
     margin-left: 5px;
 }
 
-.content {
-    padding-top:15px;
-    padding-left:55px;
-    margin-bottom: 15px;
+.search-bar > input:focus {
+    outline: none;
 }
 
-.related-articles {
+.search-bar > button {
+    height: 43px;
+    width: 18%;
+    background-color: #009530;
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+}
+
+button > a {
+    color:white;
+}
+
+/**************************** END: Header styles ****************************/
+
+
+/**************************** BEGIN: Sub-Header styles ****************************/
+.header-sub-container {
+    background: whitesmoke;
+    margin-bottom: 30px;
+}
+
+.header-sub-section {
+    background: white;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 1px;
+    padding-top: 22px;
+    padding-bottom: 12px;
+}
+
+/*
+.header-sub-section-left {
+    margin-left: 30px;
+    margin-right: 15px;
+}
+
+.header-sub-section-center {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.header-sub-section-right {
+    margin-left: 15px;
+    margin-right: 30px;
+}
+*/
+.header-sub-section > a >.row > .col-sm-3 > .glyphicon {
+    font-size: 25px;
+    color: #009530;
+    margin-left: 30px;
+    margin-top: 7px; 
+}
+
+.header-sub-section-text {
+    color: darkgray;
+    font-size: 13px;
+    margin-left: 10px;
+}
+
+.header-sub-section-title {
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.header-sub-breadcrumb {
     background-color: whitesmoke;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    color: darkgrey;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+/**************************** END: Sub-Header styles ****************************/
+
+
+
+/**************************** BEGIN: Content styles ****************************/
+
+
+
+.related-content-section {
+    padding-top: 10px;
     padding-left: 15px;
+    padding-bottom: 10px;
+    background-color: whitesmoke;
+}
+
+.content-heading {
+    font-size: 25px;
+}
+
+.content-body {
+    padding-bottom: 40px;
 }
 
 .related-content {
-    padding-left: 30px;
+    margin-bottom: 10px;
 }
 
-.related-articles > h4 {
-    padding-bottom: 10px;
+.article {
+    border-top: solid;
+    border-width: thin;
+    border-color: lightgray;
+    margin-left: 1px;
+    margin-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.comments {
+.sub-text {
     color: darkgray;
     font-size: 13px;
-}
-
-.link {
-    color: #32a3cb;
 }
 
 .accent {
@@ -162,57 +222,22 @@
     padding-bottom: 7px;
 }
 
-.published-content {
-    text-align: right;
-    padding-right: 30px;
+.content-section > h3 {
+    margin-bottom: 10px;
 }
 
-.content > .thumbs-up {
-    height: 40px;
-    width: 100px;
-    background-color: #9cc051;
-    border-style: none;
-    border-radius: 5px;
-    color: white;
-    margin-right: 5px;
+.content-header {
+    margin-bottom: 15px;
 }
 
-.content > .thumbs-down {
-    height: 40px;
-    width: 100px;
-    background-color: #d26a40;
-    border-style: none;
-    border-radius: 5px;
-    color: white;
-    margin-right: 5px;
-}
-
-.content > .submit {
-    height: 40px;
-    width: 100px;
-    background-color: #6D6E71;
-    border-style: none;
-    border-radius: 5px;
-    color: white;
-    margin-right: 5px;
-    float: right;
-    margin-right: 20%;
-}
-
-.feedback {
-    margin-top:10px;
-    width: 80%;
-    height: 100px;
-}
+/**************************** END: Content styles ****************************/
 
 .footer {
     background-color: whitesmoke;
+    padding-bottom: 20px;
+    padding-top: 16px;
 }
 
-.warning {
-    background-color: #ffd633;
-    color: white;
-    padding-left: 15px;
-    height: 35px;
-    padding-top: 7px;
+.footer-h3 {
+    margin-bottom: 10px;
 }
