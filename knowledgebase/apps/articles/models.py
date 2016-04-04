@@ -17,11 +17,6 @@ class Category(models.Model):
 
 
 class Article(models.Model):
-	category_choices = (
-		('InTouch', 'InTouch'),
-		('System Platform', 'System Platform'),
-		('Workflow', 'Workflow'),
-	)
 
 	author = models.ForeignKey('auth.User')
 	title = models.CharField(max_length=200)
