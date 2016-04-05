@@ -40,3 +40,29 @@ class Article(models.Model):
 		return self.title
 
 
+class Video(models.Model):
+
+	author = models.ForeignKey('auth.User')
+	title = models.CharField(max_length=200)
+	pre_description = models.TextField()
+	post_description = models.TextField()
+	video_url = models.TextField()
+	created_date = models.DateTimeField(
+		default=timezone.now)
+	published_date = models.DateTimeField(
+		blank=True, null=True)
+	category = models.ForeignKey(Category)
+	slug = models.SlugField(blank=True)
+
+	def publish(self):
+		self.published_date = timezone.now()
+		self.save
+
+	def save(self, *args, **kwargs):
+		self.slug = slugify(self.title)
+		super(Video, self).save(*args, **kwargs)
+
+	def __str__(self):
+		return self.title
+
+
