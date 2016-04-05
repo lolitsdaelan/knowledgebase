@@ -207,6 +207,10 @@ button > a {
     padding-bottom: 20px;
 }
 
+.article-title {
+    padding-bottom: 15px;
+}
+
 .sub-text {
     color: darkgray;
     font-size: 13px;
