@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+<!-- HEADER WITH SEARCH GOES HERE -->
+{% block header-title %}
+Online Training - Videos
+{% endblock %}
+
+{% block header-text %}
+Tips and insights to get more out of your Wonderware software.
+{% endblock%}
+
+{% block sub-header %}
+<div class="header-sub-container">
+    <div class="container">
+        <div class="row header-sub-breadcrumb">
+            <div class="col-md-12">
+                <span><a href="{% url 'home' %}">Home</a> / <a href="{% url 'video_categories' %}">Online Training</a> / <a href="{% url 'video_category' slug=video.category.slug %}">{{ video.category }}</a> / {{ video.title }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container content-body">
+    <div class="row">
+        <div class="col-md-9">
+            <h2 class="video-title">{{ video.title }}</h2>
+            <div class="sub-text">
+                <span>Published: </span>
+                <span>{{ video.published_date|date:'M d, Y' }}</span>
+                <span> | </span>
+                <span>Author: </span>
+                <span class="link">{{ video.author }}</span>
+                <span> | </span>
+                <span>Comments: </span>
+                <span class="link">3</span>
+            </div>
+            <hr>
+            {{ video.pre_description|safe }}
+            <br>
+            {{ video.video_url }}
+            <br>
+            {{ video.post_description|safe }}
+            <hr>
+        </div>
+    </div>
+</div>
+{% endblock %}

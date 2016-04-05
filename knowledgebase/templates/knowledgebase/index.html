@@ -23,7 +23,14 @@ A collection of articles and training material provided by the engineers at Wond
                         </div>
                         <div class="col-sm-7">
                             <span class="header-sub-section-title">Knowledge Base</span>
-                            <p class="header-sub-section-text">{{ article_count }} articles / {{ category_count }} categories </p>
+                            <p class="header-sub-section-text">{{ article_count }} 
+                                {% if article_count > 1 %} articles
+                                {% else %} article 
+                                {% endif %}
+                                / {{ article_category_count }}
+                                {% if article_category_count > 1 %} categories
+                                {% else %} category
+                                {% endif %} </p>
                         </div>
                     </div>
                     </a>
@@ -31,14 +38,21 @@ A collection of articles and training material provided by the engineers at Wond
             </div>
             <div class="col-md-4">
                 <div class="header-sub-section header-sub-section-center">
-                    <a href="#">
+                    <a href="{% url 'video_categories' %}">
                     <div class="row">
                         <div class="col-sm-3">
                             <span class="glyphicon glyphicon-facetime-video"></span>
                         </div>
                         <div class="col-sm-7">
                             <span class="header-sub-section-title">Online Training</span>
-                            <p class="header-sub-section-text">26 videos / 6 categories</p>
+                            <p class="header-sub-section-text">{{ video_count }} 
+                                {% if video_count > 1 %} videos 
+                                {% else %} video 
+                                {% endif %}
+                             / {{ video_category_count }}
+                             {% if video_category_count > 1 %} categories
+                             {% else %} category
+                             {% endif %}</p>
                         </div>  
                     </div>
                     </a>

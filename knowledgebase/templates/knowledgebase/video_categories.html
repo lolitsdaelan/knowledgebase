@@ -2,7 +2,7 @@
 
 <!-- HEADER WITH SEARCH GOES HERE -->
 {% block header-title %}
-Knowledge Base - Articles
+Online Training - Articles
 {% endblock %}
 
 {% block header-text %}
@@ -14,7 +14,7 @@ Tips and insights to get more out of your Wonderware software.
     <div class="container">
         <div class="row header-sub-breadcrumb">
             <div class="col-md-12">
-                <span><a href="{% url 'home' %}">Home</a> / Knowledge Base</span>
+                <span><a href="{% url 'home' %}">Home</a> / Online Training</span>
             </div>
         </div>
     </div>
@@ -28,8 +28,8 @@ Tips and insights to get more out of your Wonderware software.
         <h2 class="content-header">Categories</h2>
         {% for category in categories %}
         	<div class="col-md-4 content-section">
-                <h3><a href="{% url 'article_category' slug=category.category__slug %}">{{ category.category__name }}</a></h3>
-                <p class="sub-text">{{ category.count }} articles</p>
+                <h3><a href="{% url 'video_category' slug=category.category__slug %}">{{ category.category__name }}</a></h3>
+                <p class="sub-text">{{ category.count }} videos</p>
                 <hr>
             </div>
         {% endfor %}
