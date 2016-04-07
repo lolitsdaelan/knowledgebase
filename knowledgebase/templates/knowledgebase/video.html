@@ -39,7 +39,12 @@ Tips and insights to get more out of your Wonderware software.
             <hr>
             {{ video.pre_description|safe }}
             <br>
-            {{ video.video_url }}
+            <br>
+            <section class="row">
+              <div class="span6">
+                <div class="flex-video widescreen"><iframe src="https://www.youtube-nocookie.com/embed/{{ video.video_url }}" frameborder="0" allowfullscreen=""></iframe></div>
+              </div>
+            </section>      
             <br>
             {{ video.post_description|safe }}
             <hr>
