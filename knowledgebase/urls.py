@@ -38,4 +38,9 @@ urlpatterns = [
         , views.video, name='video'), 
     url(r'^search/$',
         views.search, name='search'),
+# discussion urls
+    url(r'^discussions/$'
+        , views.discussion_categories, name='discussion_categories'),
+    url(r'^discussions/intouch/$'
+        , views.discussion_category, name='discussion_category'),
 ]

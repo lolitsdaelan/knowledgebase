@@ -50,6 +50,12 @@ def video_category(request, slug):
 	return render(request, 'knowledgebase/video_category.html'
 		, {'videos':videos})
 
+def discussion_categories(request):
+	return render(request, 'knowledgebase/discussion_categories.html')
+
+def discussion_category(request):
+	return render(request, 'knowledgebase/discussion_category.html')
+
 def search(request):
 	query = request.GET.get('q')
 	if query:

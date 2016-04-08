@@ -29,7 +29,7 @@ Tips and insights to get more out of your Wonderware software.
             <div class="row">
                 <div class="col-md-12 content-section">
                     <h3><a href="{% url 'video' pk=video.pk video_slug=video.slug category_slug=video.category.slug %}">{{ video.title }}</a></h3>
-                    <div class="sub-text">
+                    <div class="sub-text" style="float:left">
                         <span>Published: </span>
 			            <span>{{ video.published_date|date:'M d, Y' }}</span>
 			            <span> | </span>

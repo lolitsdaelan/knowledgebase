@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+<!-- HEADER WITH SEARCH GOES HERE -->
+{% block header-title %}
+Forum - Discussions
+{% endblock %}
+
+{% block header-text %}
+Tips and insights to get more out of your Wonderware software.
+{% endblock%}
+
+{% block sub-header %}
+<div class="header-sub-container">
+    <div class="container">
+        <div class="row header-sub-breadcrumb">
+            <div class="col-md-12">
+                <span><a href="{% url 'home' %}">Home</a> / Forum</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container content-body">
+    <div class="row">
+        <div class="col-md-9">
+        <h2 class="content-header">Categories</h2>
+        <!--{% for category in categories %}
+        	<div class="col-md-4 content-section">
+                <h3><a href="{% url 'video_category' slug=category.category__slug %}">{{ category.category__name }}</a></h3>
+                <p class="sub-text">{{ category.count }} topics, # replies</p>
+                <hr>
+            </div>
+        {% endfor %}-->
+            <div class="col-md-4 content-section">
+                <h3><a href="{% url 'discussion_category' %}">InTouch</a></h3>
+                <p class="sub-text">48 topics, 276 replies</p>
+                <hr>
+            </div>
+            <div class="col-md-4 content-section">
+                <h3><a href="{% url 'discussion_category' %}">Application Server</a></h3>
+                <p class="sub-text">23 topics, 188 replies</p>
+                <hr>
+            </div>
+            <div class="col-md-4 content-section">
+                <h3><a href="{% url 'discussion_category' %}">MES</a></h3>
+                <p class="sub-text">8 topics, 34 replies</p>
+                <hr>
+            </div>
+            <div class="col-md-4 content-section">
+                <h3><a href="{% url 'discussion_category' %}">Historian</a></h3>
+                <p class="sub-text">14 topics, 65 replies</p>
+                <hr>
+            </div>
+            <div class="col-md-4 content-section">
+                <h3><a href="{% url 'discussion_category' %}">Information Server</a></h3>
+                <p class="sub-text">1845 topics, 12355 replies</p>
+                <hr>
+            </div>
+	    </div>
+	</div>
+</div>
+{% endblock %}
