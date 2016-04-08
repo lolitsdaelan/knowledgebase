@@ -250,11 +250,9 @@ button > a {
   height: 0;
   margin-bottom: 16px;
   overflow: hidden;
-  padding-left: 13px;
-  padding-right: 13px;
 }
 
-.flex-video.widescreen { padding-bottom: 57.25%; padding-left: 13px;}
+.flex-video.widescreen { padding-bottom: 57.25%;}
 .flex-video.vimeo { padding-top: 0; }
 
 .flex-video iframe,
