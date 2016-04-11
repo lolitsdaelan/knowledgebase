@@ -31,7 +31,7 @@ def article_categories(request):
 		, {'categories':categories})
 
 def article_category(request,slug):
-	articles = Article.objects.filter(published_date__lte=timezone.now(),category__slug=slug)
+	articles = Article.objects.filter(published_date__lte=timezone.now(),category__slug=slug).order_by('-published_date')
 	return render(request, 'knowledgebase/article_category.html'
 		, {'articles':articles})
 
@@ -46,7 +46,7 @@ def video_categories(request):
 		, {'categories':categories})
 
 def video_category(request, slug):
-	videos = Video.objects.filter(published_date__lte=timezone.now(),category__slug=slug)
+	videos = Video.objects.filter(published_date__lte=timezone.now(),category__slug=slug).order_by('-published_date')
 	return render(request, 'knowledgebase/video_category.html'
 		, {'videos':videos})
 
@@ -56,9 +56,13 @@ def discussion_categories(request):
 def discussion_category(request):
 	return render(request, 'knowledgebase/discussion_category.html')
 
+def discussion(request):
+	return render(request, 'knowledgebase/discussion.html')
+
 def search(request):
 	query = request.GET.get('q')
 	if query:
+		# Add code to remove articles (a, the, etc) from query
 		query_list = query.split()
 		results = Article.objects.filter(reduce(lambda x,y: x | y, [Q(title__iregex="\y{0}\y".format(x))|Q(text__iregex="\y{0}\y".format(x)) for x in query_list]))
 		results_count = results.count

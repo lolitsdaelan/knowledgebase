@@ -22,6 +22,8 @@ urlpatterns = [
     	, include(admin.site.urls)),
     url(r'^$'
     	, views.home, name='home'),
+    url(r'^search/$',
+        views.search, name='search'),
 # article urls
     url(r'^articles/$'
         , views.article_categories, name='article_categories'),
@@ -36,11 +38,11 @@ urlpatterns = [
         , views.video_category, name='video_category'),  
     url(r'^videos/(?P<category_slug>[\w-]+)/(?P<pk>[0-9]+)/(?P<video_slug>[\w-]+)/$'
         , views.video, name='video'), 
-    url(r'^search/$',
-        views.search, name='search'),
 # discussion urls
     url(r'^discussions/$'
         , views.discussion_categories, name='discussion_categories'),
     url(r'^discussions/intouch/$'
         , views.discussion_category, name='discussion_category'),
+    url(r'^discussions/intouch/1/some-discussions/$'
+        , views.discussion, name='discussion')
 ]
