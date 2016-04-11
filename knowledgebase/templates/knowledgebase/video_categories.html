@@ -29,7 +29,8 @@ Tips and insights to get more out of your Wonderware software.
         {% for category in categories %}
         	<div class="col-md-4 content-section">
                 <h3><a href="{% url 'video_category' slug=category.category__slug %}">{{ category.category__name }}</a></h3>
-                <p class="sub-text">{{ category.count }} videos</p>
+                <p class="sub-text">{{ category.count }}
+                    {% if category.count > 1 %} videos {% else %} video {% endif %}</p>
                 <hr>
             </div>
         {% endfor %}

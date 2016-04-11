@@ -89,13 +89,26 @@ A collection of articles and training material provided by the engineers at Wond
                     <span class="glyphicon glyphicon-file"></span>
                 </div>
                 <div class="col-sm-10">
-                    <span><a href="{% url 'article' pk=article.pk category_slug=article.category.slug article_slug=article.slug%}">{{ article.title }}</a></span>
+                    <span><a href="{% url 'article' pk=article.pk category_slug=article.category.slug article_slug=article.slug %}">{{ article.title }}</a></span>
                 </div>
             </div>
             {% endfor %}
         </div>
         <div class="col-md-4 content-section">
-            <h3>Popular Videos</h3>
+            <h3>Recent Videos</h3>
+            {% for video in recent_videos %}
+            <div class="row article">
+                <div class="col-sm-1">
+                    <span class="glyphicon glyphicon-play"></span>
+                </div>
+                <div class="col-sm-9">
+                    <span>
+                        <a href="{% url 'video' pk=video.pk category_slug=video.category.slug video_slug=video.slug %}">{{ video.title }}</a>
+                    </span>
+                </div>
+            </div>
+            {% endfor %}
+            <!--
             <div class="row article">
                 <div class="col-sm-1">
                     <span class="glyphicon glyphicon-play"></span>
@@ -129,6 +142,7 @@ A collection of articles and training material provided by the engineers at Wond
                     <span>Creating InTouch Tags With Style and Ease</span>
                 </div>
             </div>
+            -->
         </div>
         <div class="col-md-4 content-section">
             <h3>Active Discussions</h3>
